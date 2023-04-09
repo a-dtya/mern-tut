@@ -29,6 +29,13 @@ app.put("/updateuser",(req,res)=>{
     })
     
 })
+app.delete("/deleteuser",(req,res)=>{
+    UserModel.findOneAndDelete({name:"Adithya V"}).then(()=>{
+        res.send("Record deleted")
+    }).catch((err)=>{
+        res.send(err.message)
+    })
+})
 
 app.listen(3001, ()=>{
     console.log("Server Started")
