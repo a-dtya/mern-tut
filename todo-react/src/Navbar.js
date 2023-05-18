@@ -54,13 +54,13 @@ const Navbar = () => {
         <div className="sm:hidden absolute top-16 left-0 right-0 bg-violet-500 px-4 py-2">
           <ul className="flex flex-col items-center space-y-4">
             <li>
-              <a href="#" className="text-white hover:text-gray-200">Home</a>
+            <Link to="/" className="text-white hover:text-gray-200">Home</Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-200">Register</a>
+            <Link to="/signup" className="text-white hover:text-gray-200">Register</Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-200">Login</a>
+            <Link href="/login" className="text-white hover:text-gray-200">Login</Link>
             </li>
           </ul>
         </div>
