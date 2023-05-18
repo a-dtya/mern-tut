@@ -27,7 +27,7 @@ function Profile() {
     <>
         <div>
             <div>
-                {userdetails ? (<div className='ml-4 mt-32 sm:mt-6'>Hello {userdetails.email} </div>) : (<div> Bye</div>)
+                {userdetails ? (<div className='ml-4 mt-32 sm:mt-6'>Hello {userdetails.email} </div>) : (<div> Please Login</div>)
                  
                 }
             </div>
