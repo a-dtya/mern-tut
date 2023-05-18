@@ -26,7 +26,7 @@ function SignUp() {
 
         <form className="bg-off-white px-8 py-6 rounded shadow-md w-1/2 sm:w-2/3">
           <div className="mb-4">
-            <label className="text-black text-lg">Email</label>
+            <label className="text-black text-sm sm:text-lg">Email</label>
             <input
               type="email"
               value={email}
@@ -36,7 +36,7 @@ function SignUp() {
           </div>
 
           <div className="mb-4">
-            <label className="text-black text-lg">Password</label>
+            <label className="text-black text-sm sm:text-lg">Password</label>
             <input
               type="password"
               value={password}
