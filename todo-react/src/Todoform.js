@@ -4,9 +4,15 @@ import {v4 as uuidv4} from 'uuid'
 
 function Todoform() {
     const [todo,seTodo] = useState("")
-    databases.createDocument("6465a1f120228e9beaf7",uuidv4(),{
+    const handleSubmit = ()=>{databases.createDocument("6465a1f120228e9beaf7",uuidv4(),{
         todo:todo
+    }).then((res)=>{
+        console.log(res)
+    }).catch((err)=>{
+        console.log(err)
     })
+    seTodo("")
+    }
   return (
     <div>Todoform</div>
   )
