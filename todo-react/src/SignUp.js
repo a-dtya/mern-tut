@@ -22,7 +22,7 @@ function SignUp() {
         ).then((res,err)=>{
             if(res){
                 console.log(res)
-                navigate("/")
+                navigate("/login")
             }
             
         }).catch((err)=>{
