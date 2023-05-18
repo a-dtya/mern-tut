@@ -23,15 +23,16 @@ function SignUp() {
             if(res){
                 console.log(res)
                 navigate("/")
-            }else{
-                alert("Password must be of atleast 8 characters")
             }
+            
+        }).catch((err)=>{
+            alert("Password must be of 8 characters")
         })
        
     }
   return (
     <>
-        <div className="bg-cherry-red min-h-screen">
+        <div className="bg-grey-400 min-h-screen">
       {/* Navbar */}
       <div className="h-16 bg-off-white">
         {/* Navbar content goes here */}
@@ -39,9 +40,9 @@ function SignUp() {
 
       {/* Signup form */}
       <div className="flex flex-col items-center justify-center pt-16">
-        <h1 className="text-lg text-black mb-8 sm:text-4xl">Signup</h1>
+        <h1 className="text-lg text-black mb-8 sm:text-4xl sm:text-bold">Signup</h1>
 
-        <form className="bg-off-white px-8 py-6 rounded shadow-md w-1/2 sm:w-2/3">
+        <form className="bg-gray-100 px-8 py-6 rounded shadow-md w-1/2 sm:w-2/3">
           <div className="mb-4">
             <label className="text-black text-sm sm:text-lg">Email</label>
             <input
