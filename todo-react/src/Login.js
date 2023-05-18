@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {account} from './appwrite-config'
-import {v4 as uuidv4} from 'uuid'
 import { useNavigate } from 'react-router-dom'
 import './index.css'
 function Login() {
@@ -17,7 +16,7 @@ function Login() {
         e.preventDefault()
         try {
             await account.createEmailSession(email,password)
-            navigate("/")
+            navigate("/profile")
         } catch (error) {
             
         }
