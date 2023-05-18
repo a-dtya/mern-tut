@@ -23,6 +23,8 @@ function SignUp() {
             if(res){
                 console.log(res)
                 navigate("/")
+            }else{
+                alert("Password must be of atleast 8 characters")
             }
         })
        
