@@ -2,7 +2,11 @@
 module.exports = {
   content: [ "./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        space: ['Space Grotesk','sans-serif']
+      }
+    },
     screens:{
       'sm': '320px',
       'md': '640px',
