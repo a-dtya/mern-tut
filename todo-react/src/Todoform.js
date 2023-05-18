@@ -14,8 +14,8 @@ function Todoform() {
     setTodo("")
     }
   return (
-    <div className="flex items-center justify-center space-x-4">
-      <label htmlFor="tuduInput" className="text-gray-800">
+    <div className="flex flex-wrap space-x-0.5 mt-2 space-y-0.5 sm:flex items-center justify-center sm:space-x-4">
+      <label htmlFor="tuduInput" className=" text-xs sm:text-gray-800 sm:text-lg">
         Add Tudu
       </label>
       <input
@@ -23,11 +23,11 @@ function Todoform() {
         id="tuduInput"
         value={todo}
         onChange={(e)=>setTodo(e.target.value)}
-        className="border border-gray-400 px-3 py-2 rounded"
+        className=" h-2.5 border border-gray-400 px-3 py-2 rounded sm:h-8"
       />
       <button
         onClick={handleSubmit}
-        className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded"
+        className="h-6 sm:h-8 text-xs sm:text-lg bg-violet-500 hover:bg-violet-600 text-white  px-1 sm:px-4 py-1  rounded"
       >
         Add
       </button>
