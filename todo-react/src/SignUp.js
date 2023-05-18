@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {account} from './appwrite-config'
+import { useNavigate } from 'react-router-dom'
 import './index.css'
 function SignUp() {
     const [email,setEmail] = useState("")
@@ -9,9 +11,11 @@ function SignUp() {
     const handlePasswordChange = (e)=>{
         setPassword(e.target.value)
     }
-    const handleSubmit = (e)=>{
+    const handleSubmit = async(e)=>{
         e.preventDefault()
-        
+        const promise = account.create(
+
+        )
     }
   return (
     <>
