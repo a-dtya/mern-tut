@@ -51,8 +51,9 @@ const Navbar = () => {
 
       {/* Mobile Menu Content */}
       {isMenuOpen && (
-        <div className="sm:hidden absolute top-16 left-0 right-0 bg-violet-500 px-4 py-2">
-          <ul className="flex flex-col items-center space-y-4">
+        <>
+        <div className="sm:hidden absolute top-16 left-0 right-0 bg-violet-500 px-4 py-2 mb-7">
+          <ul className="flex flex-col items-center space-y-4 ">
             <li>
             <Link to="/" className="text-white hover:text-gray-200">Home</Link>
             </li>
@@ -64,6 +65,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        
+        </>
       )}
     </nav>
   );
