@@ -3,14 +3,15 @@ import './index.css'
 function SignUp() {
     const [email,setEmail] = useState("")
     const [password,setPassword]=useState("")
-    const handleEmailChange = ()=>{
-
+    const handleEmailChange = (e)=>{
+        setEmail(e.target.value)
     }
-    const handlePasswordChange = ()=>{
-
+    const handlePasswordChange = (e)=>{
+        setPassword(e.target.value)
     }
-    const handleSubmit = ()=>{
-
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        
     }
   return (
     <>
@@ -49,7 +50,7 @@ function SignUp() {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="border-2 border-black py-2 px-4 rounded  mt-4 hover:bg-violet-700 hover:text-white" 
+            className="border-2 border-black py-2 px-4 rounded  mt-4 hover:bg-violet-700 hover:text-white text-sm sm:text-lg" 
           >
             Create User
           </button>
