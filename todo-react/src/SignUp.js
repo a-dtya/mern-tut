@@ -2,7 +2,9 @@ import React from 'react'
 
 function SignUp() {
   return (
-    <div>SignUp</div>
+    <>
+        <p className='text-bold-3x'>SignUp</p>
+    </>
   )
 }
 
