@@ -22,9 +22,7 @@ function Profile() {
             
         }
     }
-    const handleDetails = ()=>{
-        console.log(userdetails)
-    }
+    
   return (
     <>
         <div>
