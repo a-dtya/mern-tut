@@ -33,7 +33,7 @@ function Login() {
 
       {/* Signup form */}
       <div className="flex flex-col items-center justify-center pt-16">
-        <h1 className="text-lg text-black mb-8 sm:text-4xl sm:text-bold">Signup</h1>
+        <h1 className="text-lg text-black mb-8 sm:text-4xl sm:text-bold">Login</h1>
 
         <form className="bg-gray-100 px-8 py-6 rounded shadow-md w-1/2 sm:w-2/3">
           <div className="mb-4">
