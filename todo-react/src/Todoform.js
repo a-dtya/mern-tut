@@ -1,10 +1,11 @@
 import React,{useEffect,useState} from 'react'
 import { databases } from './appwrite-config'
+
 import {v4 as uuidv4} from 'uuid'
 
 function Todoform() {
     const [todo,setTodo] = useState("")
-    const handleSubmit = ()=>{databases.createDocument("6465a1f120228e9beaf7",uuidv4(),{
+    const handleSubmit = ()=>{databases.createDocument("6465a1e5c4ed1e82b0f5","6465a1f120228e9beaf7",uuidv4(),{
         todo:todo
     }).then((res)=>{
         console.log(res)

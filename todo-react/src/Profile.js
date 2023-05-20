@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { account } from './appwrite-config'
 import { useNavigate } from 'react-router-dom'
 import Todoform from './Todoform'
+import Todo from './Todo'
 import "./index.css"
 function Profile() {
     const [userdetails,setUserdetails] = useState()
@@ -40,9 +41,12 @@ function Profile() {
         </div>
         <div>
             {
-                userdetails ? (<div>
+                userdetails ? (<><div>
                     <Todoform/>
-                </div>) : (<div>No data Available</div>)
+
+                </div><div>
+                    <Todo/>
+                </div></>) : (<div>No data Available</div>)
             }
         </div>
     </>
