@@ -13,6 +13,7 @@ function Todoform() {
         console.log(err)
     })
     setTodo("")
+    window.location.reload()
     }
   return (
     <div className="flex flex-wrap space-x-0.5 mt-2 space-y-0.5 sm:flex items-center justify-center sm:space-x-4">
