@@ -5,6 +5,11 @@ import { supabase } from "./supabaseConfig";
 function App() {
   const [email,setEmail] = useState("")
   const [pass,setPass] = useState("")
+  const [tudu,setTudu] = useState({
+    todo:"",
+    user:""
+  })
+  const [id,setId] = useState("")
   const handleClick = async(e)=>{
     e.preventDefault()
     const {data,error} = await supabase.auth.signUp({
@@ -32,13 +37,41 @@ function App() {
     }
   }
   const handleSignOUT = async(e)=>{
-      e.preventDefault()
+
+    const {data,error} = await supabase.from('tudus').select('todo')
+    console.log(data)
+      /*e.preventDefault()
       const {error} = await supabase.auth.signOut()
       if(!error){
         console.log("Success")
-      }
+      }*/
       //console.log(data.user.id)
       //console.log(data.session.user.id)
+  }
+  const handleTudu = (e)=>{
+    const val = e.target.value
+    setTudu(prev=>({...prev,todo:val}))
+  }
+  const handleCreate = async()=>{
+    const {data,error} = await supabase.auth.getUser()
+    console.log(data)
+    console.log(data.user)
+    console.log(data.user.id)
+    const userid = (data.user.id).toString()
+    setTudu(prev=>({...prev,user:userid}))
+    console.log(tudu)
+    if(userid.length>0){
+      await supabase.from("tudus").insert({
+        todo:tudu.todo,
+        userid:userid
+      }).single()
+    }
+    
+    
+  }
+
+  const handleSout = async()=>{
+    const {error} = await supabase.auth.signOut()
   }
   return (
     <div style={{display:"flex", alignItems:"center", justifyContent:"center", marginTop:"4rem"}}>
@@ -61,6 +94,14 @@ function App() {
       </Button>
       <Button variant="secondary" onClick={handleSignIN} style={{marginInline:"0.5rem"}}>SignIn</Button>
       <Button variant="danger" onClick={handleSignOUT}>SignOut</Button>
+      <Form.Group className="mt-2">
+        <Form.Label>Tudu</Form.Label>
+        <Form.Control type="text" placeholder="Add Tudu" value={tudu.todo} onChange={handleTudu}></Form.Control>
+      </Form.Group>
+      <div style={{display:"flex", columnGap:"0.5rem"}}>
+      <Button variant="warning" className="mt-1" onClick={handleCreate}>Create</Button>
+      <Button variant="success" className=" mt-1" onClick={handleSout}>Out</Button>
+      </div>
     </Form>
     </div>
   );
