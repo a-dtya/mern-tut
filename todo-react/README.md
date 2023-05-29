@@ -1,5 +1,7 @@
-# Getting Started with Create React App
-
+# Getting Started with Todo App
+To test the app visit https://todo-react-ten-iota.vercel.app/ , Register yourself, Then Login
+I've used appwrite as backend, there is still an issue with selective display of todos for respective users.
+Will fix soon :)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
